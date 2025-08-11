@@ -1,22 +1,62 @@
 # Multi-Agent AI Orchestrator
 
-This Jupyter Notebook demonstrates a **multi-agent AI system** using LangChain, LangGraph, and specialized tools.  
-It creates a **Supervisor Agent** that coordinates three specialized sub-agents:
+**Multi-Agent AI Orchestrator** is a modular multi-agent system where a **Supervisor** coordinates specialized agents to perform complex, multi-step AI-driven tasks.  
+The agents work together to process input, conduct research, write code, manipulate files, and deliver a final answer to the user.
 
-- **Coder Agent** – Writes, reviews, and executes code.
-- **Files Agent** – Reads, writes, updates, and deletes files.
-- **Research Agent** – Searches the internet for relevant information.
+## 🚀 Features
 
-## Features
-- Uses **LangChain** for prompt management and agent creation.
-- Integrates **OpenRouter** models and **Tavily Search**.
-- Supports autonomous multi-step task execution.
-- Handles both code execution and file operations.
-- Modular design using `StateGraph` for workflow management.
+- **Supervisor** – coordinates workflow and agent collaboration  
+- **Coder** – generates and edits code  
+- **Files** – handles reading, writing, and file management  
+- **Research** – searches and collects information  
+- **Answer** – assembles and formats the final response  
+- Built with [LangChain](https://www.langchain.com/) and [LangGraph](https://github.com/langchain-ai/langgraph)  
+- Modular design, easily extendable with new agents  
 
-## Requirements
-- Python 3.10+
-- Jupyter Notebook
-- Required libraries (install via pip):
-  ```bash
-  pip install langchain langgraph langchain-openai langchain-tavily langchain-community pydantic
+## 📦 Requirements
+
+- Python **3.10+**
+- Dependencies listed in `pyproject.toml` (can be installed with `uv`)
+
+## 🔧 Installation
+
+### 1. Install `uv`
+```bash
+pip install uv
+```
+
+### 2. Clone the repository
+```bash
+git clone https://github.com/KopatychDisko/Multi-Agent-AI-Orchestrator.git
+cd Multi-Agent-AI-Orchestrator
+```
+
+### 3. Install dependencies
+```bash
+uv install
+```
+*(Alternatively: `uv pip install -r requirements.txt` if you have a requirements file)*
+
+## ▶ Running the Project
+
+To run the orchestrator from the console:
+```bash
+python main.py
+```
+
+## 📂 Project Structure
+```
+Multi-Agent-AI-Orchestrator/
+├── agents/             # Agent implementations
+├── main.py             # Entry point for console execution
+├── agent.ipynb         # Notebook version
+├── pyproject.toml      # Project dependencies
+├── uv.lock             # Lock file for uv
+└── README.md
+```
+
+## 🛠 Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## 📜 License
+MIT License
