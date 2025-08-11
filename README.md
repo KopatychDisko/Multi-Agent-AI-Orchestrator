@@ -35,7 +35,6 @@ cd Multi-Agent-AI-Orchestrator
 ```bash
 uv install
 ```
-*(Alternatively: `uv pip install -r requirements.txt` if you have a requirements file)*
 
 ## ▶ Running the Project
 
@@ -55,8 +54,6 @@ Multi-Agent-AI-Orchestrator/
 └── README.md
 ```
 
-## 🛠 Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## Dont forget about .env
 
-## 📜 License
-MIT License
+Add your api-key to .env file
