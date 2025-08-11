@@ -3,7 +3,6 @@ from langchain_core.runnables import RunnableConfig
 
 from langgraph.graph import StateGraph
 from langgraph.constants import END
-from langgraph.checkpoint.memory import MemorySaver
 
 from app.schema import State, members
 from app.agents import supervisor_node, files_node, coder_node, research_node, answer_node
@@ -32,11 +31,11 @@ graph.set_entry_point('supervisor')
 
 graph.add_edge('answer_agent', END)
 
-memory = MemorySaver()
-app = graph.compile(checkpointer=memory)
+app = graph.compile()
 
 def invoke_graph(message: str):
     config = RunnableConfig(recursion_limit=10, configurable={"thread_id": "1"})
+    
     temp_state = State(messages=HumanMessage(message))
 
     for step in app.stream(temp_state, stream_mode='values', config=config):
