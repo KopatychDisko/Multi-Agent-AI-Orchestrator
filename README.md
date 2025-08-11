@@ -53,3 +53,7 @@ Multi-Agent-AI-Orchestrator/
 ├── uv.lock             # Lock file for uv
 └── README.md
 ```
+
+## Dont forget about .env
+
+Add your api-key to .env file
