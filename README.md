@@ -35,7 +35,6 @@ cd Multi-Agent-AI-Orchestrator
 ```bash
 uv install
 ```
-*(Alternatively: `uv pip install -r requirements.txt` if you have a requirements file)*
 
 ## ▶ Running the Project
 
@@ -54,9 +53,3 @@ Multi-Agent-AI-Orchestrator/
 ├── uv.lock             # Lock file for uv
 └── README.md
 ```
-
-## 🛠 Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## 📜 License
-MIT License
